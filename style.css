@@ -8,7 +8,6 @@ section:hover {
 
 section {
     background-color:white;
-    /*height: 200px;*/
     margin: 0;
     overflow: auto;
     display: flex;
@@ -26,6 +25,9 @@ section img {
     padding: 2%;
 }
 
-h2 {
-    margin:0;
+.learnmore {
+    background-color:blue;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
 }
