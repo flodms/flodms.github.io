@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+}
+
+section:hover {
+    background-color:lightgray;
+}
+
+section {
+    background-color:white;
+    /*height: 200px;*/
+    margin: 0;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+section:nth-child(even) {
+    justify-content: flex-end;
+}
+
+section img {
+    width: auto;
+    height: 200px;
+    padding: 20px;
+}
+
+h2 {
+    margin:0;
+}
