@@ -22,8 +22,8 @@ section:nth-child(even) {
 
 section img {
     width: auto;
-    height: 200px;
-    padding: 20px;
+    height: 20em;
+    padding: 2%;
 }
 
 h2 {
