@@ -22,24 +22,51 @@ section:nth-child(even) {
 section img {
     width: auto;
     height: 20em;
-    padding: 2%;
+    margin: 2%;
+    position:relative;
 }
 
 .learnmore {
-    background: linear-gradient(to right, blue,rgb(144, 49, 223));
+    /*background: linear-gradient(to right, blue,rgb(144, 49, 223));*/
     padding: 1em;
     text-decoration: none;
-    color: white;
+    color: black;
     border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        color: white;
+    }
+}
+.learnmore::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, blue,rgb(144, 49, 223));
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+   
+.learnmore:hover::before {
+    width: 100%;
 }
 
 .arrow {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    border-radius: 3px;
     display: inline-block;
     padding: 5px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     margin: auto;
-  }
+}
+
+.learnmore:hover > .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    border-radius: 3px;
+    transition: border .3s ease;
+}
