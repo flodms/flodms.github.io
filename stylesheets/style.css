@@ -24,6 +24,11 @@ section img {
     height: 20em;
     margin: 2%;
     position:relative;
+    filter: grayscale(100%);
+    transition: .3s ease;
+}
+section:hover > img {
+    filter: grayscale(0%);
 }
 
 .learnmore {
@@ -34,9 +39,10 @@ section img {
     border-radius: 25px;
     position: relative;
     z-index: 1;
-    &:hover {
-        color: white;
-    }
+}
+
+section:hover .learnmore {
+    color: white;
 }
 .learnmore::before {
     content: '';
@@ -52,7 +58,7 @@ section img {
     z-index: -1;
 }
    
-.learnmore:hover::before {
+section:hover .learnmore::before {
     width: 100%;
 }
 
@@ -64,7 +70,7 @@ section img {
     margin: auto;
 }
 
-.learnmore:hover > .arrow {
+section:hover .arrow {
     border: solid white;
     border-width: 0 3px 3px 0;
     border-radius: 3px;
