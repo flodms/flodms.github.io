@@ -2,3 +2,58 @@ ul a {
     text-decoration: none;
     color: black;
 }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+video {
+    width: 10em;
+    height: auto;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    /*adjust margin when videos added*/
+}
+
+div a {
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+    border-radius: 25px;
+    position: relative;
+    margin-top: 20px;
+    z-index: 1;
+    &:hover {
+        color: white;
+    }
+}
+
+div p {
+    margin-bottom: 2em;
+}
+
+div a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, blue,rgb(144, 49, 223));
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+   
+div a:hover::before {
+    width: 100%;
+}
