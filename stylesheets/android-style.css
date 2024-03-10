@@ -20,8 +20,8 @@ div {
     margin: 2em;
     margin-left: auto;
     margin-right: auto;
-    /*adjust margin when videos added*/
     max-width: 13em;
+    text-align: center;
 }
 
 div a {
@@ -57,4 +57,14 @@ div a::before {
    
 div a:hover::before {
     width: 100%;
+}
+
+.landscape-video {
+    transform: rotate(90deg);
+    transform-origin: 37% 78%;
+    height: 10em;
+    width: auto;
+    & ~ a {
+        margin-top: 200px;
+    }
 }
