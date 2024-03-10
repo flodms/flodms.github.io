@@ -21,6 +21,7 @@ div {
     margin-left: auto;
     margin-right: auto;
     /*adjust margin when videos added*/
+    max-width: 13em;
 }
 
 div a {
